@@ -1,0 +1,159 @@
+\documentclass[spanish,12pt,a4paper,openany]{book}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancybox}
+\usepackage{thmtools}
+\usepackage{nameref}
+\usepackage{babel}
+\usepackage{hyperref}
+%\usepackage{tikz}
+%\usetikzlibrary{positioning}
+%\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt 
+\title{[Soluciones] Notas de Teoría de la Medida (L. Rendón)}
+\author{ViucheOwO}
+\begin{document}
+\begin{titlepage}
+	\maketitle
+	%\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,464); %set diagram left start at 0, and has height of 464
+		
+		%Shape: Right Triangle [id:dp6483725655468593] 
+		%\draw   (483.94,461.77) -- (318.25,257.78) -- (675.39,170.32) -- cycle ;
+		%Shape: Right Triangle [id:dp19384348198927914] 
+		%\draw   (979.76,461.76) -- (2.64,460.53) -- (522.22,388.8) -- cycle ;
+		%Shape: Triangle [id:dp813727602517299] 
+		%\draw   (518.39,548.26) -- (389.4,3.17) -- (748.88,346.7) -- cycle ;
+		
+	%\end{tikzpicture}
+\end{titlepage}
+\tableofcontents
+\chapter{Definiciones preliminares}
+	\section{Quiz 1}
+	Determine si cada uno de los siguientes enunciados es verdadero o falso:\\
+	\begin{enumerate}
+		\item  $\mathbb{Q} \in B$ donde $B$ es la $\sigma$ - álgebra de Borel.\\
+		\textbf{Verdadero:}
+			\begin{proof}
+				 Note que para cada $ r \in \mathbb{Q}, \left\{ r \right\} \in B$ puesto que este es un cerrado en $\mathbb{R}$, i.e., es complemento de un abierto (véase $\left( -\infty, r \right) \cup \left(r, \infty \right) $ ), que está en $B$. \\
+				La enumerabilidad de $\mathbb{Q}$ nos garantiza que $\displaystyle \bigcup_{r \in \mathbb{Q}} \left\{r\right\} = \mathbb{Q} \in B$
+			\end{proof}
+		\item  $\mathbb{N} \in B$ donde $B$ es la $\sigma$ - álgebra de Borel.\\
+		\textbf{Verdadero:}
+			\begin{proof}
+				La prueba es idéntica a la del punto anterior.
+			\end{proof}
+		\item El conjunto  $ F = \left\{ M: M \text{ es una } \sigma \text{- álgebra en } \mathbb{R} \right\}$ es enumerable.\\
+		\textbf{Falso:}
+			\begin{proof}
+				 Considere la aplicación $\psi: \mathbb{R} \rightarrow F$ tal que $\psi(\alpha) := M_{\alpha}$ donde $M_{\alpha} =: \left\{ \mathbb{R}, \emptyset, (- \infty, \alpha), \left[ \alpha, \infty \right) \right\}$. Considere $\mathcal{M} = Im \psi$, puesto que $\psi$ es inyectiva entonces $|\mathcal{M}| \leq |F|$, por lo tanto $F$ no puede ser contable.
+			\end{proof}
+		\item La función $f: \mathbb{R} \rightarrow \mathbb{R}$ dada por $f(x) = x^{3}$ es medible, cuando tomamos en $\mathbb{R}$ la $\sigma$ - álgebra de Borel.\\
+		\textbf{Verdadero:}
+			\begin{proof}
+				 Probaremos primero por inducción que $f(x)= x^{n}$ es medible para cada $n \in \mathbb{N}$. Para $n=1$ el resultado es obvio puesto que $f^{-1} (V) = V \in B$ para cada $V$ abierto. Supongamos que el enunciado es cierto para $n \geq 1$, luego $f(x) = x^{n+1} = x^{n} \cdot x$ es medible por la proposición 1.1.18. ya que $f = h \circ \varphi$ donde $\varphi : \mathbb{R}^{2} \rightarrow \mathbb{R}$ definida por $\varphi(y,z) = y \cdot z$ es contínua y $h: \mathbb{R} \rightarrow \mathbb{R}^{2} := (x^{n}, x)$ es medible ya que cada una de sus componentes lo es. Por le principio de inducción matemática concluimos que $f$ es medible y tomando el caso $n=3$ tenemos el resultado inicialmente pedido.
+			\end{proof}
+		\item La función $f: \mathbb{R} \rightarrow \mathbb{R}$ dada por $f(x) = |x|$ es medible, cuando tomamos en $\mathbb{R}$ la $\sigma$ - álgebra de Borel.\\
+		\textbf{Verdadero}
+		\begin{proof}
+			Note que $f(x)=|x| = (h \circ g) (x)$ es medible por la proposición 1.1.17, donde $g(x) = x^{2}$ es medible por el punto anterior y $h(x) = \sqrt{x}$ es contínua.
+		\end{proof}
+	\end{enumerate}
+	\section{Quiz 2}
+		Determine si cada uno de los siguientes enunciados es verdadero o falso:
+		\begin{enumerate}
+			\item  Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $f$ es medible entonces $|f|$ es medible.\\
+			\textbf{Verdadero:}
+			\begin{proof}
+				Note que $|f| = g \circ f$ donde $g: \mathbb{R} \rightarrow \mathbb{R}$ con  $g(x)=|x|$ es continua. La proposición 1.1.17 garantiza que $|f|$ es medible.
+			\end{proof}
+			\item Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $|f|$ es medible entonces $f$ es medible.\\
+			\textbf{Falso:}
+			\begin{proof}
+				Sea $E$ un conjunto no medible y considere $f$ definida como la siguiente función simple: $\chi_{E} - \chi_{E^{c}}$, donde $E^{c} = X-E$
+				Es claro que $|f| = 1$ es medible pero $f$ no lo es.
+			\end{proof}
+			\item Sean $(X,M)$ un espacio medible y $f: X \rightarrow \mathbb{R}$. Si $f$ es medible entonces $f^{+} = sup \left\{ f(x),0 \right\}$ y $f^{-} = sup \left\{-f(x), 0 \right\}$ son medibles.\\
+			\textbf{Verdadero}
+			\begin{proof}
+				Basta probarlo para los abiertos básicos $(\alpha, \beta )$ con $\alpha < \beta$. \\
+				Si $\alpha , \beta <0$ entonces $(f^{+})^{-1} ((\alpha, \beta)) = \emptyset$\\
+				Si $\alpha, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = f^{-1} ((\alpha, \beta)) \in M$.\\
+				Si $\alpha <0, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = (f^{+})^{-1} [0, \beta) = f^{-1} ((-\infty, 0]) \cup f^{-1} ((0, \beta)) \in M$ Note que $f^{-1} ((-\infty, 0]) \in M$ ya que $f^{-1} ((-\infty, 0]) = f^{-1} ((0, \infty)^{c}) = (f^{-1} ((0, \infty)))^{c} \in M$ pues $f^{-1}((0, \infty)) \in M$.
+			\end{proof}
+			\item $f^{+} = \frac{1}{2} \left(|f| + f \right), f^{+}$ como en el numeral anterior.\\
+			\textbf{Verdadero:}
+			\begin{proof}
+				Si $f(x) \leq 0$ entonces $\frac{1}{2} \left(|f| + f \right) (x) = \frac{1}{2} \left(-f + f \right)(x) = 0$. Ahora, si $f(x)>0$, entonces $\frac{1}{2} \left(|f| + f \right)(x) = \frac{1}{2} \left(f + f \right)(x) = \frac{1}{2}(2f)(x) = f(x)$, lo cual coincide con nuestra definición de $f^{+}$.
+			\end{proof}
+			\item $f^{-} = \frac{1}{2} \left(|f| - f \right), f^{+}$ como en el numeral anterior
+			\textbf{Verdadero:}
+			\begin{proof}
+				La prueba es análoga a la anterior.
+			\end{proof}
+		\end{enumerate}
+	\section{Quiz 3}
+	Determine si cada uno de los siguientes enunciados es verdadero o falso:
+	\begin{enumerate}
+		\item Sea $(X,M)$ un espacio medible entonces toda función simple es medible.\\
+		\textbf{Falso:}
+		\begin{proof}
+			En virtud de la proposición 1.4.3 basta tomar cualquier conjunto no medible $E$ e inmediatamente $\chi _{E}$ es una función simple no medible.
+		\end{proof}
+		\item $\chi_{A \cup B} = \chi_{A} + \chi_{B}$\\
+		\textbf{Falso:}
+		\begin{proof}
+			Tome $A, B \subset X$ no disyuntos y $ x \in A \cap B$. Note que $\chi_{A \cup B} (x)= 1$, mientras que $\chi_{A} + \chi_{B} (x)= 2$.
+		\end{proof}
+		\item  $\chi_{A - B} = \chi_{A}(1- \chi_{B})$\\
+		\textbf{Verdadero:}
+		\begin{proof}
+			Si $x \in A-B$, entonces $\chi_{A} (x) =1 , \chi_{B}(x) = 0$, luego $\chi_{A}(1- \chi_{B})(x) = 1(1-0)=1$. Ahora si $x \notin A-B$ entonces $\chi_{A} (x) =0$ o $\chi_{B}(x) = 1$, en ambos casos $\chi_{A}(1- \chi_{B})(x) = 0$.
+		\end{proof}
+		\item  $\chi_{A \cap B} = \chi_{A}  \chi_{B}$\\
+		\textbf{Verdadero}
+		\begin{proof}
+			 Si $ x \in A \cap B,$ entonces $\chi_{A} (x) =1 , \chi_{B}(x) = 1$ y por ende  $\chi_{A}  \chi_{B}(x) = 1$. Ahora, si $x \notin A \cap B$, entonces $\chi_{A} (x) = 0$ , o  $\chi_{B}(x) = 0$ y en ambos casos $\chi_{A}  \chi_{B}(x) = 0$.
+		\end{proof}
+		\item Sean $(X,M)$ espacio medible y $f \rightarrow [- \infty , \infty]$ una función medible entonces el conjunto $\left\{x \in X : f(x) = \infty \right\}$ es medible.\\
+		\textbf{Verdadero:}
+		\begin{proof}
+			Note que
+			\begin{align*}
+				\left\{x \in X : f(x) = \infty \right\} &= f^{-1} \left\{ \infty \right\}\\
+													   &= f^{-1} \displaystyle\left(\bigcap _{n \in \mathbb{N}} [n, \infty ] \right)\\
+													   &=\displaystyle \bigcap_{n \in \mathbb{N}} f^{-1}([n, \infty])\\
+													   &= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)^{c}) \right)\\
+													   &= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)) \right)^{c}\\
+													   &= \displaystyle \left( \bigcup_{n \in \mathbb{N}} f^{-1}([-\infty,n)) \right)^{c}
+			\end{align*}
+			Donde $f^{-1}([- \infty, n)) \in M$ para cada $n \in \mathbb{N}$, luego la unión contable de estos conjuntos también está en $M$ y por lo tanto su complemento lo está. Asi, $f^{-1} \left\{ \infty \right\} \in M.$
+		\end{proof}
+	\end{enumerate}
+	\section{Ejercicios}
+	\begin{enumerate}
+		\item Sean $(A_{n})_{n \in \mathbb{N}}$ una sucesión de conjuntos en $X$, muestre que
+		\begin{itemize}
+			\item $\chi_{\cup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n}(1- \chi_{A_{i}})$
+			\begin{proof}
+				Sea $x \in \cup_{i=1}^{n} A_{i}$, entonces
+			\end{proof}
+		\end{itemize}
+	\end{enumerate}
+\chapter{La medida de Lebesgue}
+	\section{Ejercicios}
+\chapter{La integral}
+	\section{Ejercicios}
+\chapter{Medida producto}
+	\section{Ejercicios}
+\chapter{Espacios $L^{p}$}
+	\section{Ejercicios}
+\chapter{Algunos tipos de convergencia}
+	\section{Ejercicios}
+\chapter{Cargas}
+	\section{Ejercicios}
+
+\end{document}

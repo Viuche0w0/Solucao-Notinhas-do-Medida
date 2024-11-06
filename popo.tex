@@ -1,0 +1,53 @@
+\documentclass[a4paper,14pt,twoside,reqno]{extbook}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathpazo}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\usepackage{tocloft, etoolbox}
+\usepackage{tikz, ifthen, bclogo}
+\usetikzlibrary {shapes.geometric}
+
+% ----------<<< tikz example >>>----------
+\newcommand{\geo} {     
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,464); %set diagram left start at 0, and has height of 464
+		
+		%Shape: Right Triangle [id:dp6483725655468593] 
+		\draw   (483.94,461.77) -- (318.25,257.78) -- (675.39,170.32) -- cycle ;
+		%Shape: Right Triangle [id:dp19384348198927914] 
+		\draw   (979.76,461.76) -- (2.64,460.53) -- (522.22,388.8) -- cycle ;
+		%Shape: Triangle [id:dp813727602517299] 
+		\draw   (518.39,548.26) -- (389.4,3.17) -- (748.88,346.7) -- cycle ;
+		%Shape: Triangle [id:dp00983639430149763] 
+		\draw   (623.79,6.71) -- (457.3,460.52) -- (662.1,460.95) -- cycle ;
+		
+		
+		
+		
+	\end{tikzpicture}
+}
+% ----------<<< END of tikz example >>>----------
+
+% ----------<<< Definition of absolutelynopagebreak by egreg >>>----------
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+	\vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+	\prevdepth=\tpd}
+% ----------<<< END of Definition of absolutelynopagebreak >>>----------
+
+\begin{document}
+	\pagestyle{plain}
+	
+	\begin{absolutelynopagebreak}
+		\part{[Solución] -Notas de Teoria de la Medida}
+		
+		\begin{center}
+			\geo
+		\end{center}
+		
+	\end{absolutelynopagebreak}
+	
+\end{document}
