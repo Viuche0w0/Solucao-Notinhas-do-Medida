@@ -16,9 +16,9 @@
 \title{[Soluciones] Notas de Teoría de la Medida (L. Rendón)}
 \author{ViucheOwO}
 \begin{document}
-\begin{titlepage}
-	\maketitle
-	%\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	\begin{titlepage}
+		\maketitle
+		%\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 		%uncomment if require: \path (0,464); %set diagram left start at 0, and has height of 464
 		
 		%Shape: Right Triangle [id:dp6483725655468593] 
@@ -28,34 +28,34 @@
 		%Shape: Triangle [id:dp813727602517299] 
 		%\draw   (518.39,548.26) -- (389.4,3.17) -- (748.88,346.7) -- cycle ;
 		
-	%\end{tikzpicture}
-\end{titlepage}
-\tableofcontents
-\chapter{Definiciones preliminares}
+		%\end{tikzpicture}
+	\end{titlepage}
+	\tableofcontents
+	\chapter{Definiciones preliminares}
 	\section{Quiz 1}
 	Determine si cada uno de los siguientes enunciados es verdadero o falso:\\
 	\begin{enumerate}
 		\item  $\mathbb{Q} \in B$ donde $B$ es la $\sigma$ - álgebra de Borel.\\
 		\textbf{Verdadero:}
-			\begin{proof}
-				 Note que para cada $ r \in \mathbb{Q}, \left\{ r \right\} \in B$ puesto que este es un cerrado en $\mathbb{R}$, i.e., es complemento de un abierto (véase $\left( -\infty, r \right) \cup \left(r, \infty \right) $ ), que está en $B$. \\
-				La enumerabilidad de $\mathbb{Q}$ nos garantiza que $\displaystyle \bigcup_{r \in \mathbb{Q}} \left\{r\right\} = \mathbb{Q} \in B$
-			\end{proof}
+		\begin{proof}
+			Note que para cada $ r \in \mathbb{Q}, \left\{ r \right\} \in B$ puesto que este es un cerrado en $\mathbb{R}$, i.e., es complemento de un abierto (véase $\left( -\infty, r \right) \cup \left(r, \infty \right) $ ), que está en $B$. \\
+			La enumerabilidad de $\mathbb{Q}$ nos garantiza que $\displaystyle \bigcup_{r \in \mathbb{Q}} \left\{r\right\} = \mathbb{Q} \in B$
+		\end{proof}
 		\item  $\mathbb{N} \in B$ donde $B$ es la $\sigma$ - álgebra de Borel.\\
 		\textbf{Verdadero:}
-			\begin{proof}
-				La prueba es idéntica a la del punto anterior.
-			\end{proof}
+		\begin{proof}
+			La prueba es idéntica a la del punto anterior.
+		\end{proof}
 		\item El conjunto  $ F = \left\{ M: M \text{ es una } \sigma \text{- álgebra en } \mathbb{R} \right\}$ es enumerable.\\
 		\textbf{Falso:}
-			\begin{proof}
-				 Considere la aplicación $\psi: \mathbb{R} \rightarrow F$ tal que $\psi(\alpha) := M_{\alpha}$ donde $M_{\alpha} =: \left\{ \mathbb{R}, \emptyset, (- \infty, \alpha), \left[ \alpha, \infty \right) \right\}$. Considere $\mathcal{M} = Im \psi$, puesto que $\psi$ es inyectiva entonces $|\mathcal{M}| \leq |F|$, por lo tanto $F$ no puede ser contable.
-			\end{proof}
+		\begin{proof}
+			Considere la aplicación $\psi: \mathbb{R} \rightarrow F$ tal que $\psi(\alpha) := M_{\alpha}$ donde $M_{\alpha} =: \left\{ \mathbb{R}, \emptyset, (- \infty, \alpha), \left[ \alpha, \infty \right) \right\}$. Considere $\mathcal{M} = Im \psi$, puesto que $\psi$ es inyectiva entonces $|\mathcal{M}| \leq |F|$, por lo tanto $F$ no puede ser contable.
+		\end{proof}
 		\item La función $f: \mathbb{R} \rightarrow \mathbb{R}$ dada por $f(x) = x^{3}$ es medible, cuando tomamos en $\mathbb{R}$ la $\sigma$ - álgebra de Borel.\\
 		\textbf{Verdadero:}
-			\begin{proof}
-				 Probaremos primero por inducción que $f(x)= x^{n}$ es medible para cada $n \in \mathbb{N}$. Para $n=1$ el resultado es obvio puesto que $f^{-1} (V) = V \in B$ para cada $V$ abierto. Supongamos que el enunciado es cierto para $n \geq 1$, luego $f(x) = x^{n+1} = x^{n} \cdot x$ es medible por la proposición 1.1.18. ya que $f = h \circ \varphi$ donde $\varphi : \mathbb{R}^{2} \rightarrow \mathbb{R}$ definida por $\varphi(y,z) = y \cdot z$ es contínua y $h: \mathbb{R} \rightarrow \mathbb{R}^{2} := (x^{n}, x)$ es medible ya que cada una de sus componentes lo es. Por le principio de inducción matemática concluimos que $f$ es medible y tomando el caso $n=3$ tenemos el resultado inicialmente pedido.
-			\end{proof}
+		\begin{proof}
+			Probaremos primero por inducción que $f(x)= x^{n}$ es medible para cada $n \in \mathbb{N}$. Para $n=1$ el resultado es obvio puesto que $f^{-1} (V) = V \in B$ para cada $V$ abierto. Supongamos que el enunciado es cierto para $n \geq 1$, luego $f(x) = x^{n+1} = x^{n} \cdot x$ es medible por la proposición 1.1.18. ya que $f = h \circ \varphi$ donde $\varphi : \mathbb{R}^{2} \rightarrow \mathbb{R}$ definida por $\varphi(y,z) = y \cdot z$ es contínua y $h: \mathbb{R} \rightarrow \mathbb{R}^{2} := (x^{n}, x)$ es medible ya que cada una de sus componentes lo es. Por le principio de inducción matemática concluimos que $f$ es medible y tomando el caso $n=3$ tenemos el resultado inicialmente pedido.
+		\end{proof}
 		\item La función $f: \mathbb{R} \rightarrow \mathbb{R}$ dada por $f(x) = |x|$ es medible, cuando tomamos en $\mathbb{R}$ la $\sigma$ - álgebra de Borel.\\
 		\textbf{Verdadero}
 		\begin{proof}
@@ -63,38 +63,38 @@
 		\end{proof}
 	\end{enumerate}
 	\section{Quiz 2}
-		Determine si cada uno de los siguientes enunciados es verdadero o falso:
-		\begin{enumerate}
-			\item  Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $f$ es medible entonces $|f|$ es medible.\\
-			\textbf{Verdadero:}
-			\begin{proof}
-				Note que $|f| = g \circ f$ donde $g: \mathbb{R} \rightarrow \mathbb{R}$ con  $g(x)=|x|$ es continua. La proposición 1.1.17 garantiza que $|f|$ es medible.
-			\end{proof}
-			\item Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $|f|$ es medible entonces $f$ es medible.\\
-			\textbf{Falso:}
-			\begin{proof}
-				Sea $E$ un conjunto no medible y considere $f$ definida como la siguiente función simple: $\chi_{E} - \chi_{E^{c}}$, donde $E^{c} = X-E$
-				Es claro que $|f| = 1$ es medible pero $f$ no lo es.
-			\end{proof}
-			\item Sean $(X,M)$ un espacio medible y $f: X \rightarrow \mathbb{R}$. Si $f$ es medible entonces $f^{+} = sup \left\{ f(x),0 \right\}$ y $f^{-} = sup \left\{-f(x), 0 \right\}$ son medibles.\\
-			\textbf{Verdadero}
-			\begin{proof}
-				Basta probarlo para los abiertos básicos $(\alpha, \beta )$ con $\alpha < \beta$. \\
-				Si $\alpha , \beta <0$ entonces $(f^{+})^{-1} ((\alpha, \beta)) = \emptyset$\\
-				Si $\alpha, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = f^{-1} ((\alpha, \beta)) \in M$.\\
-				Si $\alpha <0, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = (f^{+})^{-1} [0, \beta) = f^{-1} ((-\infty, 0]) \cup f^{-1} ((0, \beta)) \in M$ Note que $f^{-1} ((-\infty, 0]) \in M$ ya que $f^{-1} ((-\infty, 0]) = f^{-1} ((0, \infty)^{c}) = (f^{-1} ((0, \infty)))^{c} \in M$ pues $f^{-1}((0, \infty)) \in M$.
-			\end{proof}
-			\item $f^{+} = \frac{1}{2} \left(|f| + f \right), f^{+}$ como en el numeral anterior.\\
-			\textbf{Verdadero:}
-			\begin{proof}
-				Si $f(x) \leq 0$ entonces $\frac{1}{2} \left(|f| + f \right) (x) = \frac{1}{2} \left(-f + f \right)(x) = 0$. Ahora, si $f(x)>0$, entonces $\frac{1}{2} \left(|f| + f \right)(x) = \frac{1}{2} \left(f + f \right)(x) = \frac{1}{2}(2f)(x) = f(x)$, lo cual coincide con nuestra definición de $f^{+}$.
-			\end{proof}
-			\item $f^{-} = \frac{1}{2} \left(|f| - f \right), f^{+}$ como en el numeral anterior
-			\textbf{Verdadero:}
-			\begin{proof}
-				La prueba es análoga a la anterior.
-			\end{proof}
-		\end{enumerate}
+	Determine si cada uno de los siguientes enunciados es verdadero o falso:
+	\begin{enumerate}
+		\item  Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $f$ es medible entonces $|f|$ es medible.\\
+		\textbf{Verdadero:}
+		\begin{proof}
+			Note que $|f| = g \circ f$ donde $g: \mathbb{R} \rightarrow \mathbb{R}$ con  $g(x)=|x|$ es continua. La proposición 1.1.17 garantiza que $|f|$ es medible.
+		\end{proof}
+		\item Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $|f|$ es medible entonces $f$ es medible.\\
+		\textbf{Falso:}
+		\begin{proof}
+			Sea $E$ un conjunto no medible y considere $f$ definida como la siguiente función simple: $\chi_{E} - \chi_{E^{c}}$, donde $E^{c} = X-E$
+			Es claro que $|f| = 1$ es medible pero $f$ no lo es.
+		\end{proof}
+		\item Sean $(X,M)$ un espacio medible y $f: X \rightarrow \mathbb{R}$. Si $f$ es medible entonces $f^{+} = sup \left\{ f(x),0 \right\}$ y $f^{-} = sup \left\{-f(x), 0 \right\}$ son medibles.\\
+		\textbf{Verdadero}
+		\begin{proof}
+			Basta probarlo para los abiertos básicos $(\alpha, \beta )$ con $\alpha < \beta$. \\
+			Si $\alpha , \beta <0$ entonces $(f^{+})^{-1} ((\alpha, \beta)) = \emptyset$\\
+			Si $\alpha, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = f^{-1} ((\alpha, \beta)) \in M$.\\
+			Si $\alpha <0, \beta > 0 $ entonces $(f^{+})^{-1} (\alpha, \beta) = (f^{+})^{-1} [0, \beta) = f^{-1} ((-\infty, 0]) \cup f^{-1} ((0, \beta)) \in M$ Note que $f^{-1} ((-\infty, 0]) \in M$ ya que $f^{-1} ((-\infty, 0]) = f^{-1} ((0, \infty)^{c}) = (f^{-1} ((0, \infty)))^{c} \in M$ pues $f^{-1}((0, \infty)) \in M$.
+		\end{proof}
+		\item $f^{+} = \frac{1}{2} \left(|f| + f \right), f^{+}$ como en el numeral anterior.\\
+		\textbf{Verdadero:}
+		\begin{proof}
+			Si $f(x) \leq 0$ entonces $\frac{1}{2} \left(|f| + f \right) (x) = \frac{1}{2} \left(-f + f \right)(x) = 0$. Ahora, si $f(x)>0$, entonces $\frac{1}{2} \left(|f| + f \right)(x) = \frac{1}{2} \left(f + f \right)(x) = \frac{1}{2}(2f)(x) = f(x)$, lo cual coincide con nuestra definición de $f^{+}$.
+		\end{proof}
+		\item $f^{-} = \frac{1}{2} \left(|f| - f \right), f^{+}$ como en el numeral anterior
+		\textbf{Verdadero:}
+		\begin{proof}
+			La prueba es análoga a la anterior.
+		\end{proof}
+	\end{enumerate}
 	\section{Quiz 3}
 	Determine si cada uno de los siguientes enunciados es verdadero o falso:
 	\begin{enumerate}
@@ -116,7 +116,7 @@
 		\item  $\chi_{A \cap B} = \chi_{A}  \chi_{B}$\\
 		\textbf{Verdadero}
 		\begin{proof}
-			 Si $ x \in A \cap B,$ entonces $\chi_{A} (x) =1 , \chi_{B}(x) = 1$ y por ende  $\chi_{A}  \chi_{B}(x) = 1$. Ahora, si $x \notin A \cap B$, entonces $\chi_{A} (x) = 0$ , o  $\chi_{B}(x) = 0$ y en ambos casos $\chi_{A}  \chi_{B}(x) = 0$.
+			Si $ x \in A \cap B,$ entonces $\chi_{A} (x) =1 , \chi_{B}(x) = 1$ y por ende  $\chi_{A}  \chi_{B}(x) = 1$. Ahora, si $x \notin A \cap B$, entonces $\chi_{A} (x) = 0$ , o  $\chi_{B}(x) = 0$ y en ambos casos $\chi_{A}  \chi_{B}(x) = 0$.
 		\end{proof}
 		\item Sean $(X,M)$ espacio medible y $f \rightarrow [- \infty , \infty]$ una función medible entonces el conjunto $\left\{x \in X : f(x) = \infty \right\}$ es medible.\\
 		\textbf{Verdadero:}
@@ -124,11 +124,11 @@
 			Note que
 			\begin{align*}
 				\left\{x \in X : f(x) = \infty \right\} &= f^{-1} \left\{ \infty \right\}\\
-													   &= f^{-1} \displaystyle\left(\bigcap _{n \in \mathbb{N}} [n, \infty ] \right)\\
-													   &=\displaystyle \bigcap_{n \in \mathbb{N}} f^{-1}([n, \infty])\\
-													   &= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)^{c}) \right)\\
-													   &= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)) \right)^{c}\\
-													   &= \displaystyle \left( \bigcup_{n \in \mathbb{N}} f^{-1}([-\infty,n)) \right)^{c}
+				&= f^{-1} \displaystyle\left(\bigcap _{n \in \mathbb{N}} [n, \infty ] \right)\\
+				&=\displaystyle \bigcap_{n \in \mathbb{N}} f^{-1}([n, \infty])\\
+				&= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)^{c}) \right)\\
+				&= \displaystyle \bigcap_{n \in \mathbb{N}} \left(f^{-1}([-\infty, n)) \right)^{c}\\
+				&= \displaystyle \left( \bigcup_{n \in \mathbb{N}} f^{-1}([-\infty,n)) \right)^{c}
 			\end{align*}
 			Donde $f^{-1}([- \infty, n)) \in M$ para cada $n \in \mathbb{N}$, luego la unión contable de estos conjuntos también está en $M$ y por lo tanto su complemento lo está. Asi, $f^{-1} \left\{ \infty \right\} \in M.$
 		\end{proof}
@@ -139,21 +139,52 @@
 		\begin{itemize}
 			\item $\chi_{\cup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n}(1- \chi_{A_{i}})$
 			\begin{proof}
-				Procederemos por incucción. Para n=1, si $x \in A_{1}$, entonces  $ \chi_{A_{1}}(x) = 1 - \prod_{i=1}^{1}(1- \chi_{A_{1}}) = 1-(1-1) = 1$. Y si $x \notin A_{1},$ entonces  $ \chi_{A_{1}}(x) = 1 - \prod_{i=1}^{1}(1- \chi_{A_{1}}) = 1-(1-0) = 0$ Ahora supongamos que se tiene para $n \geq 1$.
+				Si $ x \in \cup_{i=1}^{n} A_{i} $, entonces $ \chi_{A_{i}} = 1$ para algún $1 \leq i \leq n$, de modo que el factor $(1- \chi_{A_{i}}) = 0$ y por lo tanto todo el producto $ \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 0 $ y así $1 - \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 1 - 0  = 1.$\\
+				Por otro lado, si $x \notin \cup_{i=1}^{n} A_{i}$ es porque $x \notin A_{i}$ para todo $1 \leq i \leq n$, esto es, $ \chi_{A_{i}} = 0$, y $\prod_ {i=1}^{n} (1- \chi_{A_{i}} = 1 - \prod_{1}^{n}(1) = 0.$ 		
+			\end{proof}
+			\item $\chi_{\cap_{i=1}^{n} A_{i}} = \prod_{i=1}^{n}\chi_{A_{i}}$.
+			\begin{proof}
+				Si $ x \in \cap_{i=1}^{n} A_{i}$ entonces $\chi_{A_{i}} (x) = 1$ para todo $1 \leq i \leq n$, de modo que $\prod_{1}^{n} \chi_{A_{i}} (x) = \prod_{1}^{n} 1 = 1$. \\
+				Si $x \notin \cap_{i=1}^{n} A_{i} $ entonces el factor $\chi_{A_{i}}(x)= 0$ para algún $i$, luego $\prod_{1}^{n} = \chi_{A_{i}} (x) = 0$.
+			\end{proof}
+			\item $\chi_{ \limsup A_{n}} = \limsup\chi_{A_{n}}$.
+			\begin{proof}
+				\begin{align*}
+					\limsup\chi_{A_{n}} (x) &= \limsup \left\{\chi_{A_{n}} (x)\right\} \\
+					&= \inf \left\{\sup \left\{\chi_{A_{k}}(x) \right\} : k \geq n \right\}\\
+					&= \begin{cases*}
+						1 \text{ si } x \in \limsup{A_{n}}\\
+						0 \text{ si } x \notin \limsup A_{n} 
+					\end{cases*}\\
+					&= \chi _{\limsup A_{n}}
+				\end{align*}
+			\end{proof}
+			\item $\chi_{ \liminf A_{n}} = \liminf\chi_{A_{n}}$.
+			\begin{proof}
+				Indéntica al punto anterior.
 			\end{proof}
 		\end{itemize}
+		Sean $(X,M)$ un espacio medible y $\left\{f_{n}: X \rightarrow [- \infty, \infty] \right\}_{n \in \mathbb{N}}$ una sucesión de funciones medibles. Muestre que:
+		\begin{itemize}
+			\item $\left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\} = \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\}$
+			\begin{proof}
+				Sea $x \in \left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\}$. Note que $f_{n}(x) \leq \sup\left\{f_{n} (x) \right\} \leq a$ para todo $n \in \mathbb{N}$, luego $x \in f^{-1}([-\infty, a])$ para todo $n$, esto es $ x \in \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $.\\
+				Reciprocamente, si $x \in \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $ entonces $f_{n}(x) \leq a$ para todo $n \in \mathbb{N}$. Esto significa que $a$ es una cota superior del conjunto $\left\{f_{n}(x)\right\}_{n \in \mathbb{N}}$, por lo que $\sup \left\{f_{n}(x)\right\}_{n \in \mathbb{N}} = \sup f_{n}(x) \leq a$, y en consecuencia $x \in \sup f_{n} ^ {-1} ([-\infty, a]), n \in \mathbb{N} = \left\{ x \in X : \sup \left\{ f_{n} (x) \right\}  \leq a, n \in \mathbb{N} \right\}.$
+			\end{proof}
+			\item 
+		\end{itemize}
 	\end{enumerate}
-\chapter{La medida de Lebesgue}
+	\chapter{La medida de Lebesgue}
 	\section{Ejercicios}
-\chapter{La integral}
+	\chapter{La integral}
 	\section{Ejercicios}
-\chapter{Medida producto}
+	\chapter{Medida producto}
 	\section{Ejercicios}
-\chapter{Espacios $L^{p}$}
+	\chapter{Espacios Lp}
 	\section{Ejercicios}
-\chapter{Algunos tipos de convergencia}
+	\chapter{Algunos tipos de convergencia}
 	\section{Ejercicios}
-\chapter{Cargas}
+	\chapter{Cargas}
 	\section{Ejercicios}
-
+	
 \end{document}
