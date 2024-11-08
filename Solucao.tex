@@ -136,42 +136,66 @@
 	\section{Ejercicios}
 	\begin{enumerate}
 		\item Sean $(A_{n})_{n \in \mathbb{N}}$ una sucesión de conjuntos en $X$, muestre que
-		\begin{itemize}
-			\item $\chi_{\cup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n}(1- \chi_{A_{i}})$
+			\begin{itemize}
+				\item $\chi_{\cup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n}(1- \chi_{A_{i}})$
+				\begin{proof}
+					Si $ x \in \cup_{i=1}^{n} A_{i} $, entonces $ \chi_{A_{i}} = 1$ para algún $1 \leq i \leq n$, de modo que el factor $(1- \chi_{A_{i}}) = 0$ y por lo tanto todo el producto $ \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 0 $ y así $1 - \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 1 - 0  = 1.$\\
+					Por otro lado, si $x \notin \cup_{i=1}^{n} A_{i}$ es porque $x \notin A_{i}$ para todo $1 \leq i \leq n$, esto es, $ \chi_{A_{i}} = 0$, y $\prod_ {i=1}^{n} (1- \chi_{A_{i}} = 1 - \prod_{1}^{n}(1) = 0.$ 		
+				\end{proof}
+				\item $\chi_{\cap_{i=1}^{n} A_{i}} = \prod_{i=1}^{n}\chi_{A_{i}}$.
+				\begin{proof}
+					Si $ x \in \cap_{i=1}^{n} A_{i}$ entonces $\chi_{A_{i}} (x) = 1$ para todo $1 \leq i \leq n$, de modo que $\prod_{1}^{n} \chi_{A_{i}} (x) = \prod_{1}^{n} 1 = 1$. \\
+					Si $x \notin \cap_{i=1}^{n} A_{i} $ entonces el factor $\chi_{A_{i}}(x)= 0$ para algún $i$, luego $\prod_{1}^{n} = \chi_{A_{i}} (x) = 0$.
+				\end{proof}
+				\item $\chi_{ \limsup A_{n}} = \limsup\chi_{A_{n}}$.
+				\begin{proof}
+					\begin{align*}
+						\limsup\chi_{A_{n}} (x) &= \limsup \left\{\chi_{A_{n}} (x)\right\} \\
+						&= \inf \left\{\sup \left\{\chi_{A_{k}}(x) \right\} : k \geq n \right\}\\
+						&= \begin{cases*}
+								1 \text{ si } x \in \limsup{A_{n}}\\
+								0 \text{ si } x \notin \limsup A_{n} 
+							\end{cases*}\\
+						&= \chi _{\limsup A_{n}}
+					\end{align*}
+				\end{proof}
+				\item $\chi_{ \liminf A_{n}} = \liminf\chi_{A_{n}}$.
+				\begin{proof}
+					Indéntica al punto anterior.
+				\end{proof}
+			\end{itemize}
+		\item Sean $(X,M)$ un espacio medible y $\left\{f_{n}: X \rightarrow [- \infty, \infty] \right\}_{n \in \mathbb{N}}$ una sucesión de funciones medibles. Muestre que:
+			\begin{itemize}
+				\item $\left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\} = \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\}$
+				\begin{proof}
+					Sea $x \in \left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\}$. Note que $f_{n}(x) \leq \sup\left\{f_{n} (x) \right\} \leq a$ para todo $n \in \mathbb{N}$, luego $x \in f_{n}^{-1}([-\infty, a])$ para todo $n$, esto es $ x \in \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $.\\
+					Reciprocamente, si $x \in \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $ entonces $f_{n}(x) \leq a$ para todo $n \in \mathbb{N}$. Esto significa que $a$ es una cota superior del conjunto $\left\{f_{n}(x)\right\}_{n \in \mathbb{N}}$, por lo que $\sup \left\{f_{n}(x)\right\}_{n \in \mathbb{N}} = \sup f_{n}(x) \leq a$, y en consecuencia $x \in \sup f_{n} ^ {-1} ([-\infty, a]), n \in \mathbb{N} = \left\{ x \in X : \sup \left\{ f_{n} (x) \right\}  \leq a, n \in \mathbb{N} \right\}.$
+				\end{proof}
+\newpage
+		\item $\left\{ x \in X : \inf f_{n} (x) < a, n \in \mathbb{N} \right\} = \displaystyle \bigcup_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) < a\right\}$.
 			\begin{proof}
-				Si $ x \in \cup_{i=1}^{n} A_{i} $, entonces $ \chi_{A_{i}} = 1$ para algún $1 \leq i \leq n$, de modo que el factor $(1- \chi_{A_{i}}) = 0$ y por lo tanto todo el producto $ \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 0 $ y así $1 - \prod_{i=1}^{n}(1- \chi_{A_{i}}) = 1 - 0  = 1.$\\
-				Por otro lado, si $x \notin \cup_{i=1}^{n} A_{i}$ es porque $x \notin A_{i}$ para todo $1 \leq i \leq n$, esto es, $ \chi_{A_{i}} = 0$, y $\prod_ {i=1}^{n} (1- \chi_{A_{i}} = 1 - \prod_{1}^{n}(1) = 0.$ 		
-			\end{proof}
-			\item $\chi_{\cap_{i=1}^{n} A_{i}} = \prod_{i=1}^{n}\chi_{A_{i}}$.
-			\begin{proof}
-				Si $ x \in \cap_{i=1}^{n} A_{i}$ entonces $\chi_{A_{i}} (x) = 1$ para todo $1 \leq i \leq n$, de modo que $\prod_{1}^{n} \chi_{A_{i}} (x) = \prod_{1}^{n} 1 = 1$. \\
-				Si $x \notin \cap_{i=1}^{n} A_{i} $ entonces el factor $\chi_{A_{i}}(x)= 0$ para algún $i$, luego $\prod_{1}^{n} = \chi_{A_{i}} (x) = 0$.
-			\end{proof}
-			\item $\chi_{ \limsup A_{n}} = \limsup\chi_{A_{n}}$.
-			\begin{proof}
-				\begin{align*}
-					\limsup\chi_{A_{n}} (x) &= \limsup \left\{\chi_{A_{n}} (x)\right\} \\
-					&= \inf \left\{\sup \left\{\chi_{A_{k}}(x) \right\} : k \geq n \right\}\\
-					&= \begin{cases*}
-						1 \text{ si } x \in \limsup{A_{n}}\\
-						0 \text{ si } x \notin \limsup A_{n} 
-					\end{cases*}\\
-					&= \chi _{\limsup A_{n}}
-				\end{align*}
-			\end{proof}
-			\item $\chi_{ \liminf A_{n}} = \liminf\chi_{A_{n}}$.
-			\begin{proof}
-				Indéntica al punto anterior.
+				Sea $x$ tal que $\inf f_{n} (x) < a$, entonces para algún $k \in \mathbb{N}$ se cumple que $f_{k}(x) < a$ (de lo contrario tendríamos que $a$ es una cota inferior del conjunto $\left\{f_{n}(x)\right\}$ mayor que el $\inf$), luego $x \in \displaystyle \bigcup_{n \in \mathbb{N}} \left\{x \in X :  f_{n}(x) < a\right\}$.\\
+				Ahora, si $f_{k}(x) < a$ para algún k, es claro que $\inf f_{n}(x) \leq f_{k}(x) < a$, esto es $x \in \inf f_{n} ^{-1}([-\infty,a))$.
 			\end{proof}
 		\end{itemize}
-		Sean $(X,M)$ un espacio medible y $\left\{f_{n}: X \rightarrow [- \infty, \infty] \right\}_{n \in \mathbb{N}}$ una sucesión de funciones medibles. Muestre que:
+		\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjutnos en $X$.\\
+		Tomando $E_{0} = \emptyset$ y $E_{n} = \cup _{k=1 ^{n}} A_{k}, F_{n} = A_{n} - E_{n-1} $ para cada $n \in  \mathbb{N}$.\\
+		Muestre que
 		\begin{itemize}
-			\item $\left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\} = \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\}$
+			\item 	$E_{n-1} \subseteq E_{n}$ para todo $n \in \mathbb{N}$
 			\begin{proof}
-				Sea $x \in \left\{ x \in X : \sup f_{n} (x) \leq a, n \in \mathbb{N} \right\}$. Note que $f_{n}(x) \leq \sup\left\{f_{n} (x) \right\} \leq a$ para todo $n \in \mathbb{N}$, luego $x \in f^{-1}([-\infty, a])$ para todo $n$, esto es $ x \in \displaystyle \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $.\\
-				Reciprocamente, si $x \in \bigcap_{n \in \mathbb{N}} \left\{x \in X : f_{n} (x) \leq a\right\} $ entonces $f_{n}(x) \leq a$ para todo $n \in \mathbb{N}$. Esto significa que $a$ es una cota superior del conjunto $\left\{f_{n}(x)\right\}_{n \in \mathbb{N}}$, por lo que $\sup \left\{f_{n}(x)\right\}_{n \in \mathbb{N}} = \sup f_{n}(x) \leq a$, y en consecuencia $x \in \sup f_{n} ^ {-1} ([-\infty, a]), n \in \mathbb{N} = \left\{ x \in X : \sup \left\{ f_{n} (x) \right\}  \leq a, n \in \mathbb{N} \right\}.$
+				Si $x \in E_{n-1}$, entonces $x \in A_{k}$ para algún $k$ entre $1$ y $n-1$, luego $x \in A_{k} \cup A_{n}$ de modo que $x \in E_{n}$.\\
 			\end{proof}
-			\item 
+			\item  $F_{i} \cap F_{j} = \emptyset $ si $i \neq j$.
+			\begin{proof}
+				Supongamos que $i<j$. Si $x \in F_{i}$ y $x \in F_{j}$ entonces $x \in A_{j}$ y $x \notin A_{k}$ para todo $k<j$, lo que contradice $x \in A_{i}$.
+			\end{proof}
+			\item $\cup _{n=1} ^{\infty} E_{n} = \cup _{n=1} ^{\infty} F_{n} = \cup _{n=1} ^{\infty} A_{n}$
+			\begin{proof}
+				Es evidente que $\cup _{n=1} ^{\infty} E_{n} = \cup _{n=1} ^{\infty} A_{n}$ por como están definidos los $E_{n}$. Otro hecho que salta a la vista es que $\cup _{n=1} ^ {\infty} F_{n} \subset \cup _{n=1} ^{\infty} A_{n}$ por la definición de los $F_{n}$.\\
+				Lo único que queda por notar es que $\cup_{k=1} ^{n} F_{k} = \cup_{k=1} ^{n} A_{k}$ para cada $n \geq 1$, donde nuevamente tenemos una inclusión gratis. Ahora, considere el mayor $k \leq n $ tal que $x \in A_{k}$. Como $A_{k} = (A_{k} \cap E_{k-1}) \cup (A_{k} - E_{k-1}) = (A_{k} \cap E_{k-1}) \cup F_{n} $. Si $x \in F_{n}$ hemos termindado. Si $x \in A_{k} \cap E_{k-1} = \cup_{j=1} ^{k-1} (A_{k} \cap A_{j})$, basta con tomar el mínimo $j$ tal que $x \in A_{k} \cap A_{j}$. Por lo tanto $x \in A_{j} - E_{j-1} = F_{j}$. (Si $x$ perteneciera a $E_{j-1}$, pertenecería a algún $A_{i}$ con $i<j$). Luego $x \in \cup_{k=1 ^{n}} F_{k}$ y concluimos $\cup_{k=1} ^{\infty} F_{k} = \cup_{k=1} ^{\infty} A_{k}$\\
+				
+			\end{proof}
 		\end{itemize}
 	\end{enumerate}
 	\chapter{La medida de Lebesgue}
