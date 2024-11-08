@@ -89,7 +89,7 @@
 		\begin{proof}
 			Si $f(x) \leq 0$ entonces $\frac{1}{2} \left(|f| + f \right) (x) = \frac{1}{2} \left(-f + f \right)(x) = 0$. Ahora, si $f(x)>0$, entonces $\frac{1}{2} \left(|f| + f \right)(x) = \frac{1}{2} \left(f + f \right)(x) = \frac{1}{2}(2f)(x) = f(x)$, lo cual coincide con nuestra definición de $f^{+}$.
 		\end{proof}
-		\item $f^{-} = \frac{1}{2} \left(|f| - f \right), f^{+}$ como en el numeral anterior
+		\item $f^{-} = \frac{1}{2} \left(|f| - f \right), f^{+}$ como en el numeral anterior\\
 		\textbf{Verdadero:}
 		\begin{proof}
 			La prueba es análoga a la anterior.
@@ -178,7 +178,7 @@
 				Ahora, si $f_{k}(x) < a$ para algún k, es claro que $\inf f_{n}(x) \leq f_{k}(x) < a$, esto es $x \in \inf f_{n} ^{-1}([-\infty,a))$.
 			\end{proof}
 		\end{itemize}
-		\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjutnos en $X$.\\
+		\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjuntos en $X$.\\
 		Tomando $E_{0} = \emptyset$ y $E_{n} = \cup _{k=1 ^{n}} A_{k}, F_{n} = A_{n} - E_{n-1} $ para cada $n \in  \mathbb{N}$.\\
 		Muestre que
 		\begin{itemize}
@@ -193,10 +193,51 @@
 			\item $\cup _{n=1} ^{\infty} E_{n} = \cup _{n=1} ^{\infty} F_{n} = \cup _{n=1} ^{\infty} A_{n}$
 			\begin{proof}
 				Es evidente que $\cup _{n=1} ^{\infty} E_{n} = \cup _{n=1} ^{\infty} A_{n}$ por como están definidos los $E_{n}$. Otro hecho que salta a la vista es que $\cup _{n=1} ^ {\infty} F_{n} \subset \cup _{n=1} ^{\infty} A_{n}$ por la definición de los $F_{n}$.\\
-				Lo único que queda por notar es que $\cup_{k=1} ^{n} F_{k} = \cup_{k=1} ^{n} A_{k}$ para cada $n \geq 1$, donde nuevamente tenemos una inclusión gratis. Ahora, considere el mayor $k \leq n $ tal que $x \in A_{k}$. Como $A_{k} = (A_{k} \cap E_{k-1}) \cup (A_{k} - E_{k-1}) = (A_{k} \cap E_{k-1}) \cup F_{n} $. Si $x \in F_{n}$ hemos termindado. Si $x \in A_{k} \cap E_{k-1} = \cup_{j=1} ^{k-1} (A_{k} \cap A_{j})$, basta con tomar el mínimo $j$ tal que $x \in A_{k} \cap A_{j}$. Por lo tanto $x \in A_{j} - E_{j-1} = F_{j}$. (Si $x$ perteneciera a $E_{j-1}$, pertenecería a algún $A_{i}$ con $i<j$). Luego $x \in \cup_{k=1 ^{n}} F_{k}$ y concluimos $\cup_{k=1} ^{\infty} F_{k} = \cup_{k=1} ^{\infty} A_{k}$\\
-				
+				Lo único que queda por notar es que $\cup_{k=1} ^{n} F_{k} = \cup_{k=1} ^{n} A_{k}$ para cada $n \geq 1$, donde nuevamente tenemos una inclusión gratis. Ahora, considere el mayor $k \leq n $ tal que $x \in A_{k}$. Como $A_{k} = (A_{k} \cap E_{k-1}) \cup (A_{k} - E_{k-1}) = (A_{k} \cap E_{k-1}) \cup F_{n} $. Si $x \in F_{n}$ hemos terminado. Si $x \in A_{k} \cap E_{k-1} = \cup_{j=1} ^{k-1} (A_{k} \cap A_{j})$, basta con tomar el mínimo $j$ tal que $x \in A_{k} \cap A_{j}$. Por lo tanto $x \in A_{j} - E_{j-1} = F_{j}$. (Si $x$ perteneciera a $E_{j-1}$, pertenecería a algún $A_{i}$ con $i<j$). Luego $x \in \cup_{k=1 ^{n}} F_{k}$ y concluimos $\cup_{k=1} ^{\infty} F_{k} = \cup_{k=1} ^{\infty} A_{k}$\\			
 			\end{proof}
 		\end{itemize}
+			\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjuntos en $X$.\\
+			
+			Defina:\\
+			$\limsup A_{n} = \cap _{m=1} ^{\infty} (\cup _{n=m} ^{\infty} A_{n})$.\\ 
+			$\liminf A_{n} = \cup _{m=1} ^{\infty} (\cap _{n=m} ^{\infty} A_{n})$.\\
+			
+			Muestre que:\\
+			$\emptyset \subseteq \liminf A_{n} \subseteq \limsup A_{n} \subseteq X$.
+			
+			\begin{proof}
+				La única inclusión no trivial es $\liminf A_{n} \subseteq \limsup A_{n}$.\\
+				
+				Primero note que $\left\{\cup_{n=k} ^{\infty} A_{n}\right\}_{k \in \mathbb{N}}$ es una secuencia decreciente.\\
+				
+				Sea $x \in \liminf A_{n}$. Existe $p \in \mathbb{N}$ tal que para todo entero $k \geq p, x \in A_{k}$ y por ende $x \in \cup_{n=k} ^{\infty} A_{n}$, por lo dicho en la línea de arriba, $\cup_{n=k} ^{\infty} A_{n} \supseteq\cup_{n=p} ^{\infty} A_{n}$, para todo $1 \leq k \leq p$, luego $x \in \cup_{n=1} ^{\infty} A_{n}$ para todo entero $n \geq 1$, ergo, $x \in \cap _{m=1} ^{\infty} (\cup _{n=m} ^{\infty} A_{n}) = \limsup A_{n}$.
+			\end{proof}
+		\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjuntos en $X$ tal que $A_{i} \subseteq A_{i+1}$ para todo $i \in \mathbb{N}$. Muestre que:\\
+		
+		$\limsup A_{n} = \cup_{n=1} ^{\infty} A_{n}= \liminf A_{n} $.
+		\begin{proof}
+			
+			 Note que $\cup_{k=m}^{n} A_{k} = \cup_{k=1} ^{n} A_{k}= A_{n}$ y $\cap_{k=m}^{n} A_{k} = A_{m}$ , $m \in \mathbb{N}, m \leq n$ cualquiera sea $n \in \mathbb{N}$. Luego $\cap_{k=m}^{\infty} A_{k} = A_{m}$.\\
+			 
+			 Ahora, $\liminf A_{n} = \cup _{m=1} ^{\infty} (\cap _{n=m} ^{\infty} A_{n}) = \cup _{m=1} ^{\infty} A_{m}$.\\
+			 
+			 Por su parte, $\limsup A_{n} = \cap _{m=1} ^{\infty} (\cup _{n=m} ^{\infty} A_{n}) = \cap _{m=1} ^{\infty} (\cup _{n=1} ^{\infty} A_{n}) = \cup_{n=1} ^{\infty} A_{n}$.\\
+		\end{proof}
+		\item Sea $(A_{n})_n \in \mathbb{N}$ un sucesión de conjuntos en $X$ tal que $A_{i} \supseteq A_{i+1}$ para todo $i \in \mathbb{N}$. Muestre que:\\
+		
+		$\limsup A_{n} = \cap_{n=1} ^{\infty} A_{n}= \liminf A_{n} $.
+		
+		\begin{proof}
+			La prueba es análoga a la del punto anterior y se deja como ejercicio al lector.
+		\end{proof}
+		
+		\item Sean $(X,M, \mu)$ un espacio de medida y $(A_{n})_{n \in \mathbb{N}}$ una sucesión de conjuntos medibles, Muestre que:\\
+		
+			\begin{itemize}
+				\item  $\mu (\liminf A_{n}) \leq \liminf \mu (A_{n}) $
+				
+				\item  $\limsup \mu(A_{n}) \leq \mu (\limsup A_{n}) $, si $\mu(\cup_{n=1} ^{\infty}) < \infty$. 
+			\end{itemize}
 	\end{enumerate}
 	\chapter{La medida de Lebesgue}
 	\section{Ejercicios}

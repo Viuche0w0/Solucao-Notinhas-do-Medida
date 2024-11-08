@@ -4,15 +4,15 @@
 \contentsline {section}{\numberline {1.2}Quiz 2}{4}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Quiz 3}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Ejercicios}{6}{section.1.4}%
-\contentsline {chapter}{\numberline {2}La medida de Lebesgue}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Ejercicios}{8}{section.2.1}%
-\contentsline {chapter}{\numberline {3}La integral}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Ejercicios}{9}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Medida producto}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Ejercicios}{10}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Espacios Lp}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Ejercicios}{11}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Algunos tipos de convergencia}{12}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ejercicios}{12}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Cargas}{13}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Ejercicios}{13}{section.7.1}%
+\contentsline {chapter}{\numberline {2}La medida de Lebesgue}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Ejercicios}{9}{section.2.1}%
+\contentsline {chapter}{\numberline {3}La integral}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ejercicios}{10}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Medida producto}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Ejercicios}{11}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Espacios Lp}{12}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ejercicios}{12}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Algunos tipos de convergencia}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ejercicios}{13}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Cargas}{14}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ejercicios}{14}{section.7.1}%
