@@ -237,10 +237,16 @@
 				\item  $\mu (\liminf A_{n}) \leq \liminf \mu (A_{n}) $
 				
 				\begin{proof}
-					Note que 
+					si 
 				\end{proof}
 				
-				\item  $\limsup \mu(A_{n}) \leq \mu (\limsup A_{n}) $, si $\mu(\cup_{n=1} ^{\infty}) < \infty$. 
+				\item  $\limsup \mu(A_{n}) \leq \mu (\limsup A_{n}) $, si $\mu(\cup_{n \in \mathbb{N}} A_{n} ) < \infty$.
+					 
+				\begin{proof}
+					\begin{align*}
+						\limsup \mu (A_{n}) = \inf \left\{ \sup \left\{ \mu (A_{k}): k\geq n \right\} \right\}
+					\end{align*}
+				\end{proof}
 			\end{itemize}
 			
 	\end{enumerate}
