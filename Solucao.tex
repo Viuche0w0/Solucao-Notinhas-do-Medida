@@ -243,9 +243,15 @@
 				\item  $\limsup \mu(A_{n}) \leq \mu (\limsup A_{n}) $, si $\mu(\cup_{n \in \mathbb{N}} A_{n} ) < \infty$.
 					 
 				\begin{proof}
+					Sabemos que $\mu( \limsup A_{n} ) = \mu (\cap_{n=1} ^{\infty} (\cup_{m=1} ^{\infty} A_{n}))$.\\
+					Como $\mu(\cup_{n \in \mathbb{N}} A_{n} ) < \infty$ y la secuencia $\left\{ \mathcal{A}_{k} \right\} = \left\{\cup_{n=k} ^{\infty} A_{n} \right\}$ es decreciente,\\
 					\begin{align*}
-						\limsup \mu (A_{n}) = \inf \left\{ \sup \left\{ \mu (A_{k}): k\geq n \right\} \right\}
+						\mu (\limsup A_{n}) = \mu (\cap_{n=1} ^ {\infty} \mathcal{A}_{n}) &= \mu(\lim_{n \rightarrow \infty} \mathcal{A}_{n})\\
+						 				 &= \mu ( \lim_{n \rightarrow \infty} \cup_{n=1} ^{\infty} A_{n})\\
+						 				 &= \mu(\lim_{n \rightarrow \infty} A_{n})\\
+						 				 &\geq \limsup \mu (A_{n})
 					\end{align*}
+					
 				\end{proof}
 			\end{itemize}
 			
