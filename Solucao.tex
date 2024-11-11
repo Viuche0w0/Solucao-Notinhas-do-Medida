@@ -32,7 +32,7 @@
 	\end{titlepage}
 	\tableofcontents
 	\chapter{Definiciones preliminares}
-	\section{Quiz 1}
+	\section {Quiz 1} \label{Quiz 1}
 	Determine si cada uno de los siguientes enunciados es verdadero o falso:\\
 	\begin{enumerate}
 		\item  $\mathbb{Q} \in B$ donde $B$ es la $\sigma$ - álgebra de Borel.\\
@@ -62,7 +62,7 @@
 			Note que $f(x)=|x| = (h \circ g) (x)$ es medible por la proposición 1.1.17, donde $g(x) = x^{2}$ es medible por el punto anterior y $h(x) = \sqrt{x}$ es contínua.
 		\end{proof}
 	\end{enumerate}
-	\section{Quiz 2}
+	\section{Quiz 2} \label{Quiz 2}
 	Determine si cada uno de los siguientes enunciados es verdadero o falso:
 	\begin{enumerate}
 		\item  Sean $(X,M)$ espacio meible y $f: X \rightarrow \mathbb{R}.$ si $f$ es medible entonces $|f|$ es medible.\\
@@ -95,7 +95,7 @@
 			La prueba es análoga a la anterior.
 		\end{proof}
 	\end{enumerate}
-	\section{Quiz 3}
+	\section{Quiz 3} \label{Quiz 3}
 	Determine si cada uno de los siguientes enunciados es verdadero o falso:
 	\begin{enumerate}
 		\item Sea $(X,M)$ un espacio medible entonces toda función simple es medible.\\
@@ -133,7 +133,7 @@
 			Donde $f^{-1}([- \infty, n)) \in M$ para cada $n \in \mathbb{N}$, luego la unión contable de estos conjuntos también está en $M$ y por lo tanto su complemento lo está. Asi, $f^{-1} \left\{ \infty \right\} \in M.$
 		\end{proof}
 	\end{enumerate}
-	\section{Ejercicios}
+	\section{Ejercicios} \label{Ejercios 1}
 	\begin{enumerate}
 		\item Sean $(A_{n})_{n \in \mathbb{N}}$ una sucesión de conjuntos en $X$, muestre que
 			\begin{itemize}
@@ -237,24 +237,59 @@
 				\item  $\mu (\liminf A_{n}) \leq \liminf \mu (A_{n}) $
 				
 				\begin{proof}
-					si 
-				\end{proof}
+					Primeramente recordemos que para cada  $ k \in  \mathbb{N}, \mathcal{A}_{k} = \cap_{n=k} ^{\infty} A_{n} \in M$ puesto que cada $A_{n} \in M$. Asimismo $\cup_{n \in \mathbb{N}} \mathcal{A}_{n} \in M$\\ 
+					
+					Ahora note que la secuencia $\left\{\mathcal{A}_{k}\right\} = \left\{\cup_{m=k} ^{\infty} A_{m}\right\}$  es creciente, por lo que
+					
+					\begin{align*}
+						\mu (\liminf A_{n}) &= \mu (\cup_{n=1} ^{\infty} (\cap_{m=n} A_{m}))\\
+											&= \mu (\cup_{n=1} \mathcal{A}_{n})\\
+											&= \lim_{n \rightarrow \infty } \mu (\mathcal{A}_n)\\
+											&= \lim_{n \rightarrow \infty } \mu (\cap_{m=n} A_{m})\\
+											&= \liminf \mu (\cap_{m=n} ^{\infty} A_{m})\\
+											&\leq \liminf \mu (A_{n}) 
+					\end{align*}
+.				\end{proof}
 				
 				\item  $\limsup \mu(A_{n}) \leq \mu (\limsup A_{n}) $, si $\mu(\cup_{n \in \mathbb{N}} A_{n} ) < \infty$.
 					 
 				\begin{proof}
-					Sabemos que $\mu( \limsup A_{n} ) = \mu (\cap_{n=1} ^{\infty} (\cup_{m=1} ^{\infty} A_{n}))$.\\
-					Como $\mu(\cup_{n \in \mathbb{N}} A_{n} ) < \infty$ y la secuencia $\left\{ \mathcal{A}_{k} \right\} = \left\{\cup_{n=k} ^{\infty} A_{n} \right\}$ es decreciente,\\
-					\begin{align*}
-						\mu (\limsup A_{n}) = \mu (\cap_{n=1} ^ {\infty} \mathcal{A}_{n}) &= \mu(\lim_{n \rightarrow \infty} \mathcal{A}_{n})\\
-						 				 &= \mu ( \lim_{n \rightarrow \infty} \cup_{n=1} ^{\infty} A_{n})\\
-						 				 &= \mu(\lim_{n \rightarrow \infty} A_{n})\\
-						 				 &\geq \limsup \mu (A_{n})
-					\end{align*}
+					Primeramente recordemos que para cada  $ k \in  \mathbb{N}, \mathcal{A}_{k} = \cup_{n=k} ^{\infty} A_{n} \in M$ puesto que cada $A_{n} \in M$. Asimismo $\cap_{n \in \mathbb{N}} \mathcal{A}_{n} \in M$\\ 
 					
+					Ahora note que la secuencia $\left\{\mathcal{A}_{k}\right\} = \left\{\cup_{m=k} ^{\infty} A_{m}\right\}$  es decreciente y $\mathcal{A}_{1} < \infty$, de modo que
+					\begin{align*}
+						\mu (\limsup A_{n}) &= \mu(\cap_{n=1} ^{\infty} (\cup_{m=k} ^{\infty} A_{m}))\\
+											&= \mu (\cap_{n=1} ^{\infty} \mathcal{A}_{n})\\
+											&=\lim_{n \rightarrow \infty } \mu (\mathcal{A}_{n})\\
+											&= \lim_{n \rightarrow \infty } \mu (\cup_{k=n}^{\infty} A_{k})\\
+											&= \limsup \mu (\cup_{k=n}^{\infty} A_{k})\\
+											&\geq \limsup \mu (A_{n})
+					\end{align*}
 				\end{proof}
 			\end{itemize}
+		\item Sean $(X, M)$ un espacio medible y $f: X \rightarrow [-\infty , \infty]$ una función. Muestre que:\\
+		
+		$f$ es medible si y solo si $\left\{x \in X : f(x) = \infty \right\} , \left\{x \in X : f (x) = - \infty \right\} \in M$  y 
+		\begin{align*}
+			f^{\sim}= \begin{cases}
+					f  &  \text{si } |f| < \infty, \\
+					0  &  \text{si } |f| = \infty.
+			\end{cases}
+		\end{align*}
+		es medible.\\
+		\begin{proof}
+			$\Rightarrow )$ Sea $f$ medible, en virtud del punto 4 del \ref{Quiz 1} las preimágenes de $\left\{\pm \infty \right\}$ son medibles. Ahora, veamos que para cada $\alpha \geq 0, (f^{\sim}) ^{-1} ((\alpha , \infty]) = (f^{\sim}) ^{-1} ((\alpha , \infty)) \cup (f^{\sim}) ^{-1} (\{ \infty \})$, donde $(f^{\sim}) ^{-1} (\{ \infty \}) = \emptyset \in M$ ya que si $x \in (f^{\sim}) ^{-1} (\{ \infty \})$, entonces $f(x) = \infty$, pero esto implicaría $|f|(x) = \infty$, y por definición de $f^{\sim}$, tendríamos $f^{\sim} = 0$. Es claro que $(f^{\sim}) ^{-1} ((\alpha, \infty )) = f^{-1}((\alpha, \infty)) \in M$ porque $f$ es medible.\\
 			
+			Si $\alpha < 0$ entonces $(f^{\sim}) ^{-1} ((\alpha , \infty]) = (f^{\sim}) ^{-1} ((\alpha , 0)) \cup (f^{\sim}) ^{-1} ( \{ 0 \} ) \cup (f^{\sim}) ^{-1} ((0, \infty])$, donde $(f^{\sim}) ^{-1} ( \{ 0 \} \}) = f^{-1}(\left\{- \infty, \infty \right\}) \in M, (f^{\sim}) ^{-1} ((0, \infty]) \in M $ y $(f^{\sim}) ^{-1} ((\alpha, 0) = f^{-1} ((\alpha, 0)) \in M$.\\
+			
+			Concluimos que $f^{\sim}$ es medible.\\
+			
+			$\Leftarrow )$ Suponga $f^{\sim}$ es medible y que $\left\{x \in X : f(x) = \infty \right\} , \left\{x \in X : f (x) = - \infty \right\} \in M$. Veamos que $f^{-1}((\alpha, \infty]) \in M$ con $\alpha \geq 0$.  Como $(f^{\sim}) ^{-1} ((\alpha , \infty]) \in M $ y $(f^{\sim}) ^{-1} ((\alpha , \infty]) = (f^{\sim}) ^{-1} ((\alpha , \infty)) \cup (f^{\sim}) ^{-1} (\{ \infty \})$ y $(f^{\sim}) ^{-1} (\{ \infty \}) = \emptyset \in M$ entonces $(f^{\sim}) ^{-1} ((\alpha , \infty]) = f^{-1} ((\alpha , \infty)) \in M$.\\
+			
+			Si $\alpha < 0$ entonces $(f^{\sim}) ^{-1} ((\alpha , \infty]) = (f^{\sim}) ^{-1} ((\alpha , 0)) \cup (f^{\sim}) ^{-1} ( \{ 0 \} ) \cup (f^{\sim}) ^{-1} ((0, \infty])$, donde $(f^{\sim}) ^{-1} ( \{ 0 \} \}) = f^{-1}(\left\{- \infty, \infty \right\}) \in M, f ^{-1} ((0, \infty]) = (f^{\sim}) ^{-1} ((0, \infty]) \in M $, y,  $f^{-1} ((\alpha, 0) = (f^{\sim})^{-1} ((\alpha, 0)) \in M$.\\
+			
+			Concluimos que $f$ es medible.
+		\end{proof}
 	\end{enumerate}
 	\chapter{La medida de Lebesgue}
 	\section{Ejercicios}

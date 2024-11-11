@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  10 NOV 2024 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  11 NOV 2024 01:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,49 +626,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 294.
+LaTeX Info: Redefining \% on input line 294.
+[9]
 Cap\'{\i }tulo 2.
-
-
-[9
-
-]
-Cap\'{\i }tulo 3.
 
 
 [10
 
 ]
-Cap\'{\i }tulo 4.
+Cap\'{\i }tulo 3.
 
 
 [11
 
 ]
-Cap\'{\i }tulo 5.
+Cap\'{\i }tulo 4.
 
 
 [12
 
 ]
-Cap\'{\i }tulo 6.
+Cap\'{\i }tulo 5.
 
 
 [13
 
 ]
-Cap\'{\i }tulo 7.
+Cap\'{\i }tulo 6.
 
 
 [14
+
+]
+Cap\'{\i }tulo 7.
+
+
+[15
 
 ] (Solucao.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -682,13 +726,13 @@ Package rerunfilecheck Info: File `Solucao.out' has not changed.
 (rerunfilecheck)             Checksum: 1E0E8E4A784AF7CB6300CBF006E0C2EB;1918.
  ) 
 Here is how much of TeX's memory you used:
- 13300 strings out of 473898
- 209972 string characters out of 5726479
+ 13309 strings out of 473898
+ 210094 string characters out of 5726479
  1945960 words of memory out of 5000000
- 35928 multiletter control sequences out of 15000+600000
+ 35935 multiletter control sequences out of 15000+600000
  574519 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,20n,79p,755b,625s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,20n,79p,755b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\SUPER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl
 1200.pk> <C:\Users\SUPER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecti1200.pk> <C:\Users\SUPER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -709,9 +753,9 @@ ublic/amsfonts/cm/cmr8.pfb><C:/Users/SUPER/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/SUPER/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/SUPER/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Solucao.pdf (14 pages, 242281 bytes).
+Output written on Solucao.pdf (15 pages, 246909 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 506 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
