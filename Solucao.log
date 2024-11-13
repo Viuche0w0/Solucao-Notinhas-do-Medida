@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  11 NOV 2024 01:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  13 NOV 2024 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,10 +726,10 @@ Package rerunfilecheck Info: File `Solucao.out' has not changed.
 (rerunfilecheck)             Checksum: 1E0E8E4A784AF7CB6300CBF006E0C2EB;1918.
  ) 
 Here is how much of TeX's memory you used:
- 13309 strings out of 473898
- 210094 string characters out of 5726479
+ 13320 strings out of 473898
+ 210196 string characters out of 5726479
  1945960 words of memory out of 5000000
- 35935 multiletter control sequences out of 15000+600000
+ 35937 multiletter control sequences out of 15000+600000
  574519 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,20n,79p,755b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -753,9 +753,9 @@ ublic/amsfonts/cm/cmr8.pfb><C:/Users/SUPER/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/SUPER/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/SUPER/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Solucao.pdf (15 pages, 246909 bytes).
+Output written on Solucao.pdf (15 pages, 251548 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
