@@ -298,31 +298,71 @@
 			Muestre que para cada $\epsilon > 0$, existe $A_{\epsilon} \subseteq \mathbb{R}$ acotado tal que $A_{\epsilon} \subseteq A$ y $\mu ^{*} (A - A_{\epsilon}) < \epsilon$.
 			
 			\begin{proof}
-				No sé mano, pero creo que eso va a ir por cuenta de q usted puede truncar un cubrimiento e intersecar con A, lo que no sé es como garantizar la diferencia con el $\epsilon$
+				Si estamos en la $\sigma-$ álgebra de Lebesgue, entonces el teorema 2.3.5 garantiza la existencia de un subconjunto compacto de A que cumple las propiedades requeridas.
+				
+				$\star$ (Si estamos en cualquier otra $\sigma-$ álgebra) No sé, pero creo que eso va a ir por cuenta de que uno puede truncar un cubrimiento e intersecarlo con A, lo que no sé es como garantizar la cuenta del $\epsilon$.
 			\end{proof}
-			\item 
+			
+			\item  Muestre que el conjunto $\left\{E \subseteq \mathbb{R} ^{n} : \mu^{*} (E)  = 0 o \mu^{*} (\mathbb{R} - E)  = 0 \right\}$ es una $\sigma-$ álgebra.
+			\begin{proof}
+				Llamemos $ M $ al conjunto. Es claro que $\emptyset, \mathbb{R}^{n} \in M$, también es evidente que si $A \in M$ entonces $\mathbb{R}^{n} - A \in M$. Para ver que si $\left\{ E_{k}\right\}_{k \in \mathbb{N}} \subset M$ es una familia de subconjuntos de $M$ entonces $\bigcup_{k \in \mathbb{N}} E_{k} \in M$ basta analizar los casos por separado cuando $\mu^{*} (E_{k}) = 0$ para tdo $k$ y cuando $\mu^{*}(\mathbb{R}-E_{k}) = 0$ para cada $k$.\\
+				
+				\begin{itemize}
+					\item Si  $\mu^{*} (E_{k}) = 0$ para tdo $k$  entonces $\mu^{*}(\bigcup_{k \in \mathbb{N}} E_{k}) \leq \sum_{k=1}^{\infty} \mu ^{*}(E_{k}) = \sum_{k=1}^{\infty} 0 = 0$.
+					
+					\item $\mu^{*}(\mathbb{R}-E_{k}) = 0$ para cada $k$ entonces $\mu^{*}(\mathbb{R}^{n} - \bigcup_{k \in \mathbb{N}} E_{k}) = \mu^{*}(\bigcap_{k \in \mathbb{N}} \mathbb{R}^{n} - E_{k}) \leq \mu^{*}(\mathbb{R}^{n} - E_{k}) = 0$ para cualquier $k$.				
+				\end{itemize}   
+				En ambos casos la unión es un elemento de $M$. Si tenemos una familia arbitraria de subconjuntos de $M$ podemos separarla en dos uniones y proceder con cada una. 
+			\end{proof}
+			
+			\item Sean $ M \subseteq \mathbb{R}^{n}, h \in \mathbb{R} ^{n}$ y $\lambda \in \mathbb{R}$. Muestre que $M + h $ y $ \lambda M$ son medibles y $\mu^{*}(M+h) = \mu^{*}(M)$ y $\mu^{*}(\lambda M) = \lambda \mu^{*}(M)$. 
+			
+				\begin{proof}
+					$M + h$ es medible: considere $f: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ tal que $f(x) = x - h$. La continuidad de $f$ garantiza que $f ^{1} (M) = M + h$ es medible.\\
+					
+					$\mu^{*} (M + h) = \mu^{*} (M)$: Note que $\mu*(I + h) = \mu(I + h) = (b + h) - (a + h)  = b - a = \mu^{*}(I)$ para todo $h \in  \mathbb{R}, I $ 1-celda. Luego $\mu^{*}(I+h)  = \mu^{*}(I)$ para toda n-celda, de modo que si $\{ I_{k}\}_{k \in \mathbb{N}}$ es cubrimiento por n-celdas de $M$, entonces $\{I_{k} + h\}_{k \in \mathbb{N}}$ es cubrimiento por n-celdas de $M + h$, e $\inf \{ \sum_{k=1}^{\infty} \mu^{*} (I_{k}) : M \subset \bigcup_{i=1} I_{k}^{\infty}\} = \inf \{ \sum_{k=1}^{\infty} \mu^{*} (I_{k} + h) : M + h\subset \bigcup_{i=1}^{\infty} I_{k} + h \}$\\
+					
+					$\lambda M$ es medible: Para $\lambda \neq 0$ repita la prueba anterior con $f(x) = \dfrac{x}{\lambda}$ . Si $\lambda = 0$, $\lambda M = \{ 0 \}$.\\
+					
+					$\mu^{*}(\lambda M) = M \mu^{*} (M):$ Repita la prueba anterior teniendo en cuenta que si $I$ es una 1-celda, entonces $ \mu^{*}(\lambda I) = \mu(I) = (\lambda a , \lambda b) = \lambda b - \lambda a = \lambda(b-a). =  \lambda \mu^{*}(I)$. Cabe resaltar que si $\lambda < 0 $, $\mu^{*}(\lambda I) = \mu(I) = \mu((\lambda a , \lambda b)) = \mu((-|\lambda| b   , -|\lambda | a)) = -|\lambda| a  - (-|\lambda|) b = |\lambda|(-1)(a-b) = |\lambda|(b-a). =  |\lambda| \mu^{*}(I)$.\\
+					
+					Así, podemos ver que si $I$ es una n-celda en $\mathbb{R}^{n}$, entonces $\mu^{*}(I) = \prod_{k=1}^{n} \mu(\lambda(a_{1}^{j}, b_{k}^{j})) = \prod_{k=1}^{n} |\lambda|(b_{k}^{j} - a_{k}^{j}) = |\lambda|^{n} \mu(I).$ De modo que si $\bigcup _{k = 1} ^{\infty} I_{k}$ es un cubrimiento por n-celdas de $M$, entonces $\bigcup _{k = 1} ^{\infty} \lambda I_{k}$ es un cubrimiento por n-celdas de $\lambda M$, e 
+					\begin{align*}
+						\inf \displaystyle \left\{ \sum_{k=1}^{\infty} \mu^{*} (\lambda I_{k}) : \lambda M \subset \bigcup_{i=1}  \lambda I_{k}^{\infty}\right\}
+						&= \inf \displaystyle \left\{ \sum_{k=1}^{\infty} |\lambda|^{n} \mu^{*}(I_{k}) : M \subset \bigcup_{i=1}^{\infty}  I_{k}\right\}\\				
+						&= \inf \displaystyle \left\{|\lambda|^{n} \sum_{k=1}^{\infty} \mu^{*}(I_{k}) :  M \subset \bigcup_{i=1}^{\infty} I_{k} \right\}\\
+						&= |\lambda|^{n} \inf \displaystyle \left\{\sum_{k=1}^{\infty} \mu^{*}(I_{k}): M \subset \bigcup_{i=1}^{\infty} I_{k}\right\}\\
+						&= |\lambda|^{n} \mu^{*}(M)
+					\end{align*}
+				\end{proof}
 			
 			\item 
-			
+				
 			\item 
 			
-			\item 
+			\item No existe $\sigma-$ álgebra enumerable.
 			
-			\item 
+				\begin{proof}
+					Vea la observación 1.1.5.
+				\end{proof}
 			
-			\item 
+			\item Sea $E \subset [0,1]$, con $\mu^{*}([0,1] - E) = 0$. Muestre que $E$ es denso en $[0,1]$.
+			
+				\begin{proof}
+					Sea $x \in [0,1] - E$. Para todo $r>0, B_{(x,r)} \cap E \neq \emptyset$, ya que de lo contrario tendríamos $B_{(x,r)} \subseteq [0,1] - E$, luego $\mu^{*} (B_{(x,r)}) = 0$, lo cual es absurdo. Concluimos que $E$ es denso en $[0,1]$. 
+				\end{proof}
 			
 			\item Sea $M \subseteq \mathbb{R}^{n}$. Muestre que si $\mu^{*}(E) = 0, int(E) = \emptyset$
 			
-			\begin{proof}
-				Suponga que $x \in int(E),$ entonces existe $r > 0$ tal que $B_{(x,r)} \subset E$, luego $0 < \mu^{*}(B_{(x,r)}) \leq \mu^{*} (E) = 0$, lo cual es absurdo. Concluimos que $int (E)   =  \emptyset$.
-			\end{proof}
+				\begin{proof}
+					Suponga que $x \in int(E),$ entonces existe $r > 0$ tal que $B_{(x,r)} \subset E$, luego $0 < \mu^{*}(B_{(x,r)}) \leq \mu^{*} (E) = 0$, lo cual es absurdo. Concluimos que $int (E)   =  \emptyset$.
+				\end{proof}
 			
 			\item Sea $M \subseteq \mathbb{R}^{n}$ enumerable. Muestre que $\mu^{*}(E) = 0$.
 			
-			\begin{proof}
-				Note que $E = \bigcup_{x \in E} \{ x \}$, claramente $\mu^{*} (\{ x \}) = 0$ para cada $x$. Luego $\mu ^{*} (E) = \sum_{x \in E} \mu^{*}(\{x\}) = \sum_{x \in E} 0 = 0.$
-			\end{proof}		
+				\begin{proof}
+					Note que $E = \bigcup_{x \in E} \{ x \}$, claramente $\mu^{*} (\{ x \}) = 0$ para cada $x$. Luego $\mu ^{*} (E) = \sum_{x \in E} \mu^{*}(\{x\}) = \sum_{x \in E} 0 = 0$.
+				\end{proof}		
 		\end{enumerate}
 	\chapter{La integral}
 	\section{Ejercicios}
