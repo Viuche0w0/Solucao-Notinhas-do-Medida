@@ -336,7 +336,16 @@
 					\end{align*}
 				\end{proof}
 			
-			\item 
+			\item Demostrar que si $f: \mathbb{R} \rightarrow \mathbb{R}$ es monótona entonces es Lebesgue medible.
+				
+				\begin{proof}
+					Como $f$ es monótona entonces podemos asumir que es creciente. Veamos que $f^{-1}([t, \infty)) \left\{x \in \mathbb{R} : f(x) \geq t \right\}$ es o bien $\emptyset, \mathbb{R},$ o alguna cola abierta o cerrada.\\
+					
+					Si $u \in f^{-1}[t, \infty))$, para todo $v \geq u$, como asumimos $f$ creciente, entonces $t \leq f(u) \leq f(v)$, por lo que $v \in f^{-1}[t, \infty))$.
+					
+					Tenemos que $f$ es Borel medible y por tanto Lebesgue medible.
+					
+				\end{proof}
 				
 			\item 
 			
