@@ -298,9 +298,7 @@
 			Muestre que para cada $\epsilon > 0$, existe $A_{\epsilon} \subseteq \mathbb{R}$ acotado tal que $A_{\epsilon} \subseteq A$ y $\mu ^{*} (A - A_{\epsilon}) < \epsilon$.
 			
 			\begin{proof}
-				Si estamos en la $\sigma-$ álgebra de Lebesgue, entonces el teorema 2.3.5 garantiza la existencia de un subconjunto compacto de A que cumple las propiedades requeridas.
-				
-				$\star$ (Si estamos en cualquier otra $\sigma-$ álgebra) No sé, pero creo que eso va a ir por cuenta de que uno puede truncar un cubrimiento e intersecarlo con A, lo que no sé es como garantizar la cuenta del $\epsilon$.
+				Dado $\epsilon > 0 $, tome $\left\{I_{k}\right\}_{k \in \mathbb{N}}$ cubrimiento por celdas de $A$ tal que $\sum_{k=1}^{\infty} \mu(I_{k}) = \mu^{*}(A) + \epsilon$. Ahora note que $\left\{I_{k} \cap A \right\}$ cubre a $A$, luego $\displaystyle \sum_{k=1}^{\infty} \mu^{*}(I_{k} \cap A) < \infty$. Ergo, existe $N \in \mathbb{N}$ tal que $\mu^{*}(A) = \displaystyle \sum_{k=1}^{\infty} \mu^{*}(I_{k} \cap A) = \displaystyle \sum_{k=1}^{N} \mu^{*}(I_{k} \cap A) + \displaystyle \sum_{k=N+1}^{\infty} \mu^{*}(I_{k} \cap A) < \displaystyle \sum_{k=1}^{N} \mu^{*}(I_{k} \cap A) + \epsilon.$, de modo que tomando $A_{\epsilon} = \cup_{k=1}^{N} (I_{k} \cap A)$ obtenemos $\mu^{*}(A - A_{\epsilon}) < \epsilon$.
 			\end{proof}
 			
 			\item  Muestre que el conjunto $\left\{E \subseteq \mathbb{R} ^{n} : \mu^{*} (E)  = 0 o \mu^{*} (\mathbb{R} - E)  = 0 \right\}$ es una $\sigma-$ álgebra.
@@ -347,7 +345,19 @@
 					
 				\end{proof}
 				
-			\item 
+			\item Suponga que $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ es medible y $\dfrac{\partial f}{\partial x_{1}}$ existe en cada punto de $\mathbb{R} ^{n}$. Muestre que $\dfrac{\partial f}{\partial x_{1}} $ es medible.
+			
+				\begin{proof}
+					Como $\dfrac{\partial f}{\partial x_{1}} (x)$ existe para cada $x \in \mathbb{R}^{n}$ Entonces 
+					\begin{align*}
+						\lim_{h \rightarrow 0} \dfrac{f(x_{1} + h, ... , (x_{n})) - f(x_{1}, ..., x_{n})}{h}
+					\end{align*}
+					Existe para cada $x \in \mathbb{R}^{n}$. Con esto en mente podemos definir la siguiente sucesión de funciones $f_{n} : \mathbb{R}^{n} \rightarrow \mathbb{R}$ como sigue.
+					\begin{align*}
+						f_{n}(x) = \dfrac{f\left(x_{1} + \frac{1}{n}, ... , x_{n}\right)}{\frac{1}{n}}
+					\end{align*}
+					Como $f$ es medible, para cada $n \geq 1$, tenemos que $f_{n}$ lo es también y que $d\frac{\partial f}{\partial x_{1}} = \lim_{n \rightarrow \infty} f_{n}$ también es medible.
+				\end{proof}
 			
 			\item No existe $\sigma-$ álgebra enumerable.
 			
