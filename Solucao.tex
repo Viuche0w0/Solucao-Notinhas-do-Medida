@@ -292,7 +292,7 @@
 		\end{proof}
 	\end{enumerate}
 	\chapter{La medida de Lebesgue}
-	\section{Ejercicios}
+	\section{Ejercicios} \label{Ejercicios 2}
 		\begin{enumerate}
 			\item Sea $A \subseteq \mathbb{R}^{n}, \mu ^{*} (A) < \infty$.\\
 			Muestre que para cada $\epsilon > 0$, existe $A_{\epsilon} \subseteq \mathbb{R}$ acotado tal que $A_{\epsilon} \subseteq A$ y $\mu ^{*} (A - A_{\epsilon}) < \epsilon$.
@@ -301,7 +301,7 @@
 				Dado $\epsilon > 0 $, tome $\left\{I_{k}\right\}_{k \in \mathbb{N}}$ cubrimiento por celdas de $A$ tal que $\sum_{k=1}^{\infty} \mu(I_{k}) = \mu^{*}(A) + \epsilon$. Ahora note que $\left\{I_{k} \cap A \right\}$ cubre a $A$, luego $\displaystyle \sum_{k=1}^{\infty} \mu^{*}(I_{k} \cap A) < \infty$. Ergo, existe $N \in \mathbb{N}$ tal que $\mu^{*}(A) = \displaystyle \sum_{k=1}^{\infty} \mu^{*}(I_{k} \cap A) = \displaystyle \sum_{k=1}^{N} \mu^{*}(I_{k} \cap A) + \displaystyle \sum_{k=N+1}^{\infty} \mu^{*}(I_{k} \cap A) < \displaystyle \sum_{k=1}^{N} \mu^{*}(I_{k} \cap A) + \epsilon.$, de modo que tomando $A_{\epsilon} = \cup_{k=1}^{N} (I_{k} \cap A)$ obtenemos $\mu^{*}(A - A_{\epsilon}) < \epsilon$.
 			\end{proof}
 			
-			\item  Muestre que el conjunto $\left\{E \subseteq \mathbb{R} ^{n} : \mu^{*} (E)  = 0 o \mu^{*} (\mathbb{R} - E)  = 0 \right\}$ es una $\sigma-$ álgebra.
+			\item  Muestre que el conjunto $\left\{E \subseteq \mathbb{R} ^{n} : \mu^{*} (E)  = 0 \text{ o } \mu^{*} (\mathbb{R} - E)  = 0 \right\}$ es una $\sigma-$ álgebra.
 			\begin{proof}
 				Llamemos $ M $ al conjunto. Es claro que $\emptyset, \mathbb{R}^{n} \in M$, también es evidente que si $A \in M$ entonces $\mathbb{R}^{n} - A \in M$. Para ver que si $\left\{ E_{k}\right\}_{k \in \mathbb{N}} \subset M$ es una familia de subconjuntos de $M$ entonces $\bigcup_{k \in \mathbb{N}} E_{k} \in M$ basta analizar los casos por separado cuando $\mu^{*} (E_{k}) = 0$ para tdo $k$ y cuando $\mu^{*}(\mathbb{R}-E_{k}) = 0$ para cada $k$.\\
 				
@@ -316,7 +316,7 @@
 			\item Sean $ M \subseteq \mathbb{R}^{n}, h \in \mathbb{R} ^{n}$ y $\lambda \in \mathbb{R}$. Muestre que $M + h $ y $ \lambda M$ son medibles y $\mu^{*}(M+h) = \mu^{*}(M)$ y $\mu^{*}(\lambda M) = \lambda \mu^{*}(M)$. 
 			
 				\begin{proof}
-					$M + h$ es medible: considere $f: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ tal que $f(x) = x - h$. La continuidad de $f$ garantiza que $f ^{1} (M) = M + h$ es medible.\\
+					$M + h$ es medible: considere $f: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ tal que $f(x) = x - h$. La continuidad de $f$ garantiza que $f ^{-1} (M) = M + h$ es medible.\\
 					
 					$\mu^{*} (M + h) = \mu^{*} (M)$: Note que $\mu*(I + h) = \mu(I + h) = (b + h) - (a + h)  = b - a = \mu^{*}(I)$ para todo $h \in  \mathbb{R}, I $ 1-celda. Luego $\mu^{*}(I+h)  = \mu^{*}(I)$ para toda n-celda, de modo que si $\{ I_{k}\}_{k \in \mathbb{N}}$ es cubrimiento por n-celdas de $M$, entonces $\{I_{k} + h\}_{k \in \mathbb{N}}$ es cubrimiento por n-celdas de $M + h$, e $\inf \{ \sum_{k=1}^{\infty} \mu^{*} (I_{k}) : M \subset \bigcup_{i=1} I_{k}^{\infty}\} = \inf \{ \sum_{k=1}^{\infty} \mu^{*} (I_{k} + h) : M + h\subset \bigcup_{i=1}^{\infty} I_{k} + h \}$\\
 					
@@ -384,7 +384,10 @@
 				\end{proof}		
 		\end{enumerate}
 	\chapter{La integral}
-	\section{Ejercicios}
+	\section{Ejercicios} \label{Ejercicios 3}
+		\begin{enumerate}
+			\item 
+		\end{enumerate}
 	\chapter{Medida producto}
 	\section{Ejercicios}
 	\chapter{Espacios Lp}
